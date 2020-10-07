@@ -15,7 +15,7 @@ app.use('/api/books', bookRouter.bookRouter);
 
 //Deployment
 const directory = path.resolve();
-app.use(express.static(path.join(directory, '/frontend/build')));
+app.use(express.static(path.join(directory, '/frontend/build/index.html')));
 app.get('*', (req, res) =>
   res.sendFile(path.resolve(directory, 'frontend', 'build', 'index.html'))
 );
