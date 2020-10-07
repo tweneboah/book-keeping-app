@@ -15,12 +15,24 @@ const UserSchema = new mongoose.Schema({
   },
 });
 
-//Hash password
+//Popuplating this field of books to user s
+UserSchema.virtual('books', {
+  ref: 'Book',
+  foreignField: 'createdBy',
+  localField: '_id',
+});
+UserSchema.set('toJSON', { virtuals: true });
+//=== END=======
+
+//hashpassword
 UserSchema.pre('save', async function (next) {
-  //create salt
+  //We only want to do this if the password is sent or modified, this is because when a user later update their password this will run and the user cannot login
+  if (!this.isModified('password')) {
+    next();
+  }
   const salt = await bcrypt.genSalt(10);
-  //hash password
   this.password = await bcrypt.hash(this.password, salt);
+  next();
 });
 
 //Verify password for login

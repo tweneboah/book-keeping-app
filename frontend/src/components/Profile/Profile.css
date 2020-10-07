@@ -1,0 +1,49 @@
+.panel-shadow {
+  box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+  border: 1px solid #dddddd;
+}
+.panel {
+  font-size: 13px;
+  color: #454545;
+  background: #fafafa;
+  position: relative;
+  overflow-x: hidden;
+  font-family: 'Source Sans Pro', 'Oxygen', sans-serif;
+}
+.panel-white .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.panel-white .panel-footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+.bg2 {
+  background-image: url('https://via.placeholder.com/560x344/FF4500/000000');
+}
+.profile-widget {
+  position: relative;
+}
+.profile-widget .image-container {
+  background-size: cover;
+  background-position: center;
+  padding: 190px 0 10px;
+}
+.profile-widget .image-container .profile-background {
+  width: 100%;
+  height: auto;
+}
+.profile-widget .image-container .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto -60px;
+  display: block;
+}
+.profile-widget .details {
+  padding: 50px 15px 15px;
+  text-align: center;
+}
