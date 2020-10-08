@@ -5,6 +5,7 @@
 - Database association
 - User profile
 - User update profile
+- Authentication (Login/Logout)
 
 # Technologies
 
