@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Book keeping App",
   "main": "server.js",
+  "engines": {
+    "node": "16.17.0"
+  },
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
